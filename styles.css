@@ -1,0 +1,70 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    
+}
+
+.container{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    border: 1px solid black;
+    position: relative;
+}
+
+.container .number{
+    --rotation:0;
+    transform: rotate(var(--rotation));
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+}
+.container .hands{
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    border: 1px solid white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform-origin: bottom;
+    z-index: 10;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+
+.container .number1 {--rotation:30deg}
+.container .number2 {--rotation:60deg}
+.container .number3 {--rotation:90deg}
+.container .number4 {--rotation:120deg}
+.container .number5 {--rotation:150deg}
+.container .number6 {--rotation:180deg}
+.container .number7 {--rotation:210deg}
+.container .number8 {--rotation:240deg}
+.container .number9 {--rotation:270deg}
+.container .number10 {--rotation:300deg}
+.container .number11 {--rotation:330deg}
+.container .number12 {--rotation:3600deg}
+
+
+
+.container .hour-hand{
+    width: 15px;
+    height: 35%;
+    background-color: black;
+}
+
+.container .minute-hand{
+    width: 7px;
+    height: 40%;
+    background-color: black;
+}
+.container .seconds-hand{
+    width: 5;
+    height: 45%;
+    background-color: black;
+}
